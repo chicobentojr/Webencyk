@@ -4,7 +4,8 @@
         <title>
             <?php echo $tituloPagina; ?>
         </title>
-        <link rel="shortcut icon" href="imagens/basic1-117_user_group_couple-512.png" />
+        <meta charset="utf-8"></meta>
+        <link rel="shortcut icon" href="imagens/Webencyk_Logo.jpg" />
 
         <link href="css/style.css" rel="stylesheet" />
         <link href="css/semantic.css" rel="stylesheet" type="text/css" />
