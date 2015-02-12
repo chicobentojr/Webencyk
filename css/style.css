@@ -1,0 +1,14 @@
+﻿body
+{
+    background-color: #d3d3d3 !important; 
+}
+
+.escondido
+{
+    display: none !important; 
+}
+
+a 
+{
+    text-decoration: none;
+}
