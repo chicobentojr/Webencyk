@@ -5,9 +5,9 @@ class conexao
     /*Altere as variaveis a seguir caso necessario*/
 	
     private $db_host = 'localhost'; // servidor
-    private $db_user = 'root'; // usuario do banco
-    private $db_pass = ''; // senha do usuario do banco
-    private $db_name = 'crud'; // nome do banco
+    private $db_user = 'adminxJwRMuA'; // usuario do banco
+    private $db_pass = 'm6NQBP2-XiNa'; // senha do usuario do banco
+    private $db_name = 'webencyk'; // nome do banco
 
     private $con = false;
 
