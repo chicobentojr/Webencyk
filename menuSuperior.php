@@ -6,7 +6,7 @@ $caminhoJS = "imagens/";
 <section id='adm' style='top: 0px;'>
     <div id='pagina' class='ui inverted menu' style='margin-top:0; margin-bottom:0;'>
         <a id='btnMenu' class='item' ><i class='list layout icon'></i>Menu</a>
-        <a href='/Webencyk/' class='item'><i class='home icon'></i>Home</a>
+        <a href='/' class='item'><i class='home icon'></i>Home</a>
         <div class='item'>
             <div class='ui icon input'>
                 <input ID='pesquisa' placeholder='Buscar no site...' />
