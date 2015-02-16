@@ -14,7 +14,7 @@ $caminhoJS = "imagens/";
             </div>
         </div>
     <div class='right menu' style='height: 40px;'>
-        <a id='divRegistro' href='/Webencyk/registro/' class='item'><i class='sign in icon'></i> Registrar-se</a>
+        <a id='divRegistro' href='/registro/' class='item'><i class='sign in icon'></i> Registrar-se</a>
         <a href='login.php' id='btnLogin' class='item'><i class='user icon'></i>Login</a>
 
         </div>
