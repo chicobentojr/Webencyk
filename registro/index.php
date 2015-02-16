@@ -14,8 +14,8 @@
         $email = $_POST['email']; //pega o elemento com o pelo NAME 
         $senha = $_POST['senha']; //pega o elemento com o pelo NAME 
         $tipo = 1;
-        $crud = new crud('usuario');  // instancia classe com as operaçoes crud, passando o nome da tabela como parametro
-        $crud->inserir("email,nome,senha,tipo_id", "'$email','$nome','$senha','$tipo'"); // utiliza a funçao INSERIR da classe crud
+        $crud = new crud('USUARIO');  // instancia classe com as operaçoes crud, passando o nome da tabela como parametro
+        $crud->inserir("EMAIL,NOME,SENHA,TIPO_ID", "'$email','$nome','$senha','$tipo'"); // utiliza a funçao INSERIR da classe crud
         header("Location: index.php"); // redireciona para a listagem
     }
 
