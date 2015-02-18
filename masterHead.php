@@ -6,11 +6,12 @@ if (!(isset($caminhoJS))) {
 $caminhoJS = "js/";
 }
 if (!(isset($caminhoIMG))) {
-$caminhoJS = "imagens/";
+$caminhoIMG = "imagens/";
 }
 ?>
 
 <meta charset='utf-8'></meta>
+<title>Webencyk - Seu portal de Estudos!</title>
 <link rel='shortcut icon' href='<?= $caminhoIMG . 'Webencyk_Logo.jpg'?>' />
 
 <link href='<?= $caminhoCSS . 'style.css' ?>' rel='stylesheet' />
