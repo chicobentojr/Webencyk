@@ -12,6 +12,7 @@ if (isset($_POST['logout'])){
         <?php if(isset($_SESSION['usr_id'])){ ?> 
             <a id='btnMenu' class='item' ><i class='list layout icon'></i>Menu</a>
         <?php } ?>
+        <a id='btnMenu' class='item' ><i class='list layout icon'></i>Menu</a>
         <a href='/' class='item'><i class='home icon'></i>Home</a>
         <div class='item'>
             <div class='ui icon input'>
@@ -26,6 +27,8 @@ if (isset($_POST['logout'])){
         <a id='divRegistro' href='/registro/' class='item'><i class='sign in icon'></i> Registrar-se</a>
         <a href='/login.php' id='btnLogin' class='item'><i class='user icon'></i>Login</a>
         <?php } ?>
+        <a id='divRegistro' href='/registro/' class='item'><i class='sign in icon'></i> Registrar-se</a>
+        <a href='login.php' id='btnLogin' class='item'><i class='user icon'></i>Login</a>
         </div>
     </div>
 
