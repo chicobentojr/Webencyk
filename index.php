@@ -41,7 +41,7 @@
                     <h5 class="ui header">Realize Atividades de todas os temas das linguagens do Webencyk </h5>
                 </div>
             </div>
-        </div>
+    <!--</div>-->
      <!--   <div class="ui three column grid aligned center"> -->
             <div class="column">
                 <div class="ui segment inverted teal">
@@ -57,7 +57,7 @@
                     <h5 class="ui header">Clique aqui para saber um pouco mais sobre o projeto</h5>
                 </div>
             </div>
-    <!--</div>-->
+    </div>
 </section>
 </form>
 </body>
