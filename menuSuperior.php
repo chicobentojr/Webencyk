@@ -2,7 +2,7 @@
 if (!(isset($caminhoIMG))) {
 $caminhoIMG = "imagens/";
 }
-if (isset($_POST['logout'])){
+if (isset($_GET['logout'])){
     session_destroy();
     header('Location:index.php');
 }
@@ -21,7 +21,7 @@ if (isset($_POST['logout'])){
         </div>
     <div class='right menu' style='height: 40px;'>
         <?php if(isset($_SESSION['usr_id'])){ ?> 
-        <input value="logout" type="submit" name="logout" id="btnLogin" class="ui teal button"><i class='off icon'></i>Logout</a>
+        <a href="index.php?logout=true" type="submit" name="logout" id="btnLogin" class="ui teal button"><i class='off icon'></i>Logout</a>
         <?php } else { ?> 
         <a id='divRegistro' href='/registro/' class='item'><i class='sign in icon'></i> Registrar-se</a>
         <a href='/login.php' id='btnLogin' class='item'><i class='user icon'></i>Login</a>
