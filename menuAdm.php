@@ -19,7 +19,7 @@ if (isset($_GET['logout'])){
         </div>
         <div class="right menu" style="height: 40px;">
             <a id="Mostrar" class="item"><i class="settings icon"></i>Configurações </a>
-            <a href="index.php?logout=true" type="submit" name="logout" id="btnLogin" class="item"><i class='off icon'></i>Logout</a>
+            <a href="?logout=true" type="submit" name="logout" id="btnLogin" class="item"><i class='off icon'></i>Logout</a>
             <!--<input value="logout" type="submit" name="logout" id="btnLogin" class="ui teal button"><i class='off icon'></i>Logout</a>-->
         </div>
     </div>
