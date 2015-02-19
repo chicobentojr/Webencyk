@@ -21,7 +21,7 @@ if (isset($_GET['logout'])){
         </div>
     <div class='right menu' style='height: 40px;'>
         <?php if(isset($_SESSION['usr_id'])){ ?> 
-        <a href="index.php?logout=true" type="submit" name="logout" id="btnLogin" class="item"><i class='off icon'></i>Logout</a>
+        <a href="?logout=true" type="submit" name="logout" id="btnLogin" class="item"><i class='off icon'></i>Logout</a>
         <?php } else { ?> 
         <a id='divRegistro' href='/registro/' class='item'><i class='sign in icon'></i> Registrar-se</a>
         <a href='/login.php' id='btnLogin' class='item'><i class='user icon'></i>Login</a>
