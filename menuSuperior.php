@@ -1,6 +1,6 @@
 <?php
 if (!(isset($caminhoIMG))) {
-$caminhoJS = "imagens/";
+$caminhoIMG = "imagens/";
 }
 if (isset($_POST['logout'])){
     session_destroy();
@@ -12,7 +12,7 @@ if (isset($_POST['logout'])){
         <?php if(isset($_SESSION['usr_id'])){ ?> 
             <a id='btnMenu' class='item' ><i class='list layout icon'></i>Menu</a>
         <?php } ?>
-        <a href='/' class='item'><i class='home icon'></i>Home</a>
+        <a href='/Webencyk/' class='item'><i class='home icon'></i>Home</a>
         <div class='item'>
             <div class='ui icon input'>
                 <input ID='pesquisa' placeholder='Buscar no site...' />
@@ -23,8 +23,8 @@ if (isset($_POST['logout'])){
         <?php if(isset($_SESSION['usr_id'])){ ?> 
         <input value="logout" type="submit" name="logout" id="btnLogin" class="ui teal button"><i class='off icon'></i>Logout</a>
         <?php } else { ?> 
-        <a id='divRegistro' href='/registro/' class='item'><i class='sign in icon'></i> Registrar-se</a>
-        <a href='/login.php' id='btnLogin' class='item'><i class='user icon'></i>Login</a>
+        <a id='divRegistro' href='/Webencyk/registro/' class='item'><i class='sign in icon'></i> Registrar-se</a>
+        <a href='/Webencyk/login.php' id='btnLogin' class='item'><i class='user icon'></i>Login</a>
         <?php } ?>
         </div>
     </div>
@@ -40,8 +40,10 @@ if (isset($_POST['logout'])){
         <a href='PerfilProgresso.aspx' class='item'><i class='user icon'></i>Progresso</a>
         <a href='PerfilUsuario.aspx' class='item'><i class='edit icon'></i>Alterar seus Dados</a>
         <a href='VisualizarLinguagem.aspx' class='item'><i class='book icon'></i>Conteúdo</a>
-        <a href='EnviarMensagem.aspx' class='item'><i class='mail icon'></i>Contate-nos </a>
-        <a id='divAdm' href='PaginaAdm.aspx' class='item' visible='false'><i class='settings icon'></i>Configurações</a>
+        <a href='enviarMensagem.php' class='item'><i class='mail icon'></i>Contate-nos </a>
+        <?php if($_SESSION['usr_tipo'] == 2) { ?>
+        <a id='divAdm' href='/Webencyk/administrador.php' class='item' visible='false'><i class='settings icon'></i>Configurações</a>
+        <?php } ?>
     </div>
 
 </section>

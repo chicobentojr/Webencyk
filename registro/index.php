@@ -33,17 +33,6 @@
         else {
             echo "<script>alert('Esse email já foi cadastrado');</script>";
         }
-        $crud = new crud('USUARIO');  // instancia classe com as operaçoes crud, passando o nome da tabela como parametro
-        $crud->inserir("EMAIL,NOME,SENHA,TIPO_ID", "'$email','$nome','$senha','$tipo'"); // utiliza a funçao INSERIR da classe crud
-        header("Location: index.php"); // redireciona para a listagem
-    }
-
-    if(isset ($_POST['editar'])){ // caso  seja passado o id via GET edita 
-        $nome = $_POST['nome']; //pega o elemento com o pelo NAME
-        $descricao = $_POST['descricao']; //pega o elemento com o pelo NAME
-        $crud = new crud('produto'); // instancia classe com as operaçoes crud, passando o nome da tabela como parametro
-        $crud->atualizar("nome='$nome',descricao='$descricao'", "id='$getId'"); // utiliza a funçao ATUALIZAR da classe crud
-        header("Location: index.php"); // redireciona para a listagem
     }
 ?>
 <!DOCTYPE html>
@@ -91,7 +80,7 @@
 
             <center>         
              <div class="ui buttons">
-                 <input  ID="btnCancelar" type="button" value="Voltar" class="ui button cancel" onclick="redirecionar('/')" />
+                 <input  ID="btnCancelar" type="button" value="Voltar" class="ui button cancel" onclick="redirecionar('/Webencyk/')" />
                 <div class="or" data-text="ou"></div>
                 <input ID="btnRegistrar" type="submit" name="registrar" onclick="btnRegistrar_Click" value="Enviar" class="ui teal button" />
              </div>   
@@ -103,6 +92,7 @@
     </form>
     </body>
 </html>
+
 <?php
     $con->disconnect();
 ?>

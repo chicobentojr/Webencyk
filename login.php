@@ -20,7 +20,11 @@
                 if ($campo['SENHA'] == $senha) {
                     $_SESSION['usr_id'] = $campo['USUARIO_ID'];
                     $_SESSION['usr_nome'] = $campo['NOME'];
-                    header('Location:index.php');
+                    $_SESSION['usr_tipo'] = $campo['TIPO_ID'];
+                    if ($_SESSION['usr_tipo'] == 1) {
+                        header('Location:index.php');
+                    }
+                    else header('Location:administrador.php');
                 }
                 else { $msgErr = "Senha Incorreta.";}
             }
@@ -56,7 +60,7 @@
         <div class="ui divider"></div>
         <center>     
              <div class="ui buttons">
-                 <input  ID="btnCancelar" type="button" value="Voltar" class="ui button cancel" onclick="redirecionar('/')"/>
+                 <input  ID="btnCancelar" type="button" value="Voltar" class="ui button cancel" onclick="redirecionar('/Webencyk/')"/>
                 <div class="or" data-text="ou"></div>
                 <input ID="btnLogin" value="Entrar" name="entrar" type="submit"  class="ui teal button" />
             </div>   
