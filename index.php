@@ -57,7 +57,7 @@
                     <h5 class="ui header">Clique aqui para saber um pouco mais sobre o projeto</h5>
                 </div>
             </div>
-        </div>
+    <!--</div>-->
 </section>
 </form>
 </body>
