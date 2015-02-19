@@ -4,7 +4,7 @@ $caminhoIMG = "imagens/";
 }
 if (isset($_GET['logout'])){
     session_destroy();
-    header('Location:index.php');
+    header('Location:/');
 }
 ?>
 <section id='adm' style='top: 0px;'>
