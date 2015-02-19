@@ -80,7 +80,7 @@
 
             <center>         
              <div class="ui buttons">
-                 <input  ID="btnCancelar" type="button" value="Voltar" class="ui button cancel" onclick="redirecionar('/Webencyk/')" />
+                 <input  ID="btnCancelar" type="button" value="Voltar" class="ui button cancel" onclick="redirecionar('/')" />
                 <div class="or" data-text="ou"></div>
                 <input ID="btnRegistrar" type="submit" name="registrar" onclick="btnRegistrar_Click" value="Enviar" class="ui teal button" />
              </div>   

@@ -49,7 +49,7 @@
                         <a class="item" href="GerenciarAtividades.aspx">Atividades </a>
                         <a class="item" href="GerenciarQuestoes.aspx">Questões </a>
                         <a class="item" href="GerenciarUsuarios.aspx">Usuários </a>
-                        <a class="item" href="/Webencyk/Gerenciar/Mensagens.php">Mensagens </a>
+                        <a class="item" href="/Gerenciar/Mensagens.php">Mensagens </a>
                     </div>
                 </div>
                 </div>

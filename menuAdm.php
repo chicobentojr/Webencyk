@@ -10,7 +10,7 @@ if (isset($_POST['logout'])){
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <section id="adm">
     <div id="pagina" class="ui inverted menu" style="margin-top:0; margin-bottom:0;">
-        <a href="/Webencyk/" class="item"><i class="home icon"></i>Home </a>
+        <a href="/" class="item"><i class="home icon"></i>Home </a>
         <div class='item'>
             <div class='ui icon input'>
                 <input ID='pesquisa' placeholder='Buscar no site...' />
@@ -59,7 +59,7 @@ if (isset($_POST['logout'])){
                     <a class="item" href="GerenciarAtividades.aspx">Atividades </a>
                     <a class="item" href="GerenciarQuestoes.aspx">Questões </a>
                     <a class="item" href="GerenciarUsuarios.aspx">Usuários </a>
-                    <a class="item" href="/Webencyk/Gerenciar/Mensagens.php">Mensagens </a>
+                    <a class="item" href="/Gerenciar/Mensagens.php">Mensagens </a>
                 </div>
             </div>
             <div class="title">

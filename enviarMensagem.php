@@ -49,7 +49,7 @@
                         <div class="ui divider"></div>
                         <center> 
                          <div class="ui buttons">
-                            <input  ID="btnCancelar" type="button" value="Voltar" class="ui button cancel" onclick="redirecionar('/Webencyk/')"/>
+                            <input  ID="btnCancelar" type="button" value="Voltar" class="ui button cancel" onclick="redirecionar('/')"/>
                             <div class="or" data-text="ou"></div>
                             <input ID="btnLogin" value="Enviar" name="enviar" type="submit"  class="ui teal button" />
                         </div>
