@@ -4,7 +4,7 @@ $caminhoJS = "imagens/";
 }
 if (isset($_GET['logout'])){
     session_destroy();
-    header('Location:index.php');
+    header('Location:/');
 }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
