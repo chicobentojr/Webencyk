@@ -14,7 +14,7 @@
             $msgErr = "O Assunto e a Mensagem são Obrigatórios!";
         }
         else{
-            $msg = new crud('mensagem');
+            $msg = new crud('MENSAGEM');
             $msg->inserir('USUARIO_ID,DATA_HORA,ASSUNTO,TEXTO',"$usr_id,now(),'$assunto','$mensagem'");
             $sucesso = true;
         }
