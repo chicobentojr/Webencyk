@@ -4,16 +4,17 @@ class conexao
 {
     /*Altere as variaveis a seguir caso necessario*/
 
+    /*
     private $db_host = $_ENV['OPENSHIFT_MYSQL_DB_HOST']; // servidor
     private $db_user = $_ENV['OPENSHIFT_MYSQL_DB_USERNAME']; // usuario do banco
     private $db_pass = $_ENV['OPENSHIFT_MYSQL_DB_PASSWORD']; // senha do usuario do banco
-    private $db_name = 'webencyk'; // nome do banco	
-		
-    /*
+    private $db_name = 'webencyk'; // nome do banco
+    */
+    
     private $db_host = 'localhost'; // servidor
     private $db_user = 'adminxJwRMuA'; // usuario do banco
     private $db_pass = 'm6NQBP2-XiNa'; // senha do usuario do banco
-    private $db_name = 'webencyk'; // nome do banco */
+    private $db_name = 'webencyk'; // nome do banco 
 	
     /*
     $_ENV['OPENSHIFT_MYSQL_DB_HOST']      - DB host
