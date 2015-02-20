@@ -41,14 +41,6 @@
 <body>
     <form action="" method="post">
         <?php include('menuSuperior.php'); ?>
-        <?php
-            //apenas testando a conexao
-            if($con->connect() == true){
-                echo 'Conectou';
-            }else{
-                echo 'Não conectou';
-            }
-        ?>
 <section id="login">
     <div class="ui three column page grid ">
         <div class="column"> </div>
