@@ -11,10 +11,16 @@ class conexao
     private $db_name = 'webencyk'; // nome do banco
     */
     
-    private $db_host = 'localhost'; // servidor
-    private $db_user = 'adminxJwRMuA'; // usuario do banco
-    private $db_pass = 'm6NQBP2-XiNa'; // senha do usuario do banco
-    private $db_name = 'webencyk'; // nome do banco 
+    define('DB_HOST',getenv('OPENSHIFT_MYSQL_DB_HOST'));
+    define('DB_PORT',getenv('OPENSHIFT_MYSQL_DB_PORT')); 
+    define('DB_USER',getenv('OPENSHIFT_MYSQL_DB_USERNAME'));
+    define('DB_PASS',getenv('OPENSHIFT_MYSQL_DB_PASSWORD'));
+    define('DB_NAME',getenv('OPENSHIFT_GEAR_NAME'));
+    
+    private $db_host = DB_HOST; // servidor
+    private $db_user = DB_USER; // usuario do banco
+    private $db_pass = DB_PASS; // senha do usuario do banco
+    private $db_name = DB_NAME; // nome do banco 
     
     /*
     $_ENV['OPENSHIFT_MYSQL_DB_HOST']      - DB host
