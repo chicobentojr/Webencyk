@@ -11,6 +11,7 @@ $caminhoIMG = "imagens/";
 ?>
 
 <meta charset='utf-8'></meta>
+<title>Webencyk</title>
 <link rel='shortcut icon' href='<?= $caminhoIMG . 'Webencyk_Logo.jpg'?>' />
 
 <link href='<?= $caminhoCSS . 'style.css' ?>' rel='stylesheet' />
