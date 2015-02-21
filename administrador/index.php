@@ -5,12 +5,15 @@
 <html>
     <head>
         <?php
-            include("masterHead.php");
+            $caminhoJS = "../js/";
+            $caminhoCSS = "../css/";
+            $caminhoIMG = "../imagens/";
+            include("../masterHead.php");
         ?>
     </head>
     <body>
         <form method="post">
-            <?php include('menuAdm.php'); ?>
+            <?php include('../menuAdm.php'); ?>
             <div class="ui three column grid aligned center">
                 <div class="column">
                 <div class="ui basic accordion">
@@ -49,7 +52,7 @@
                         <a class="item" href="GerenciarAtividades.aspx">Atividades </a>
                         <a class="item" href="GerenciarQuestoes.aspx">Questões </a>
                         <a class="item" href="GerenciarUsuarios.aspx">Usuários </a>
-                        <a class="item" href="/gerenciar/mensagens.php">Mensagens </a>
+                        <a class="item" href="/administrador/gerenciar/mensagens.php">Mensagens </a>
                     </div>
                 </div>
                 </div>

@@ -23,8 +23,8 @@ if (isset($_GET['logout'])){
         <?php if(isset($_SESSION['usr_id'])){ ?> 
         <a href="?logout=true" type="submit" name="logout" id="btnLogin" class="item"><i class='off icon'></i>Logout</a>
         <?php } else { ?> 
-        <a id='divRegistro' href='/registro/' class='item'><i class='sign in icon'></i> Registrar-se</a>
-        <a href='/login.php' id='btnLogin' class='item'><i class='user icon'></i>Login</a>
+        <a id='divRegistro' href='/usuario/registro.php' class='item'><i class='sign in icon'></i> Registrar-se</a>
+        <a href='/usuario/login.php' id='btnLogin' class='item'><i class='user icon'></i>Login</a>
         <?php } ?>
         </div>
     </div>
@@ -40,9 +40,9 @@ if (isset($_GET['logout'])){
         <a href='PerfilProgresso.aspx' class='item'><i class='user icon'></i>Progresso</a>
         <a href='PerfilUsuario.aspx' class='item'><i class='edit icon'></i>Alterar seus Dados</a>
         <a href='VisualizarLinguagem.aspx' class='item'><i class='book icon'></i>Conteúdo</a>
-        <a href='enviarMensagem.php' class='item'><i class='mail icon'></i>Contate-nos </a>
+        <a href='/usuario/enviarMensagem.php' class='item'><i class='mail icon'></i>Contate-nos </a>
         <?php if($_SESSION['usr_tipo'] == 2) { ?>
-        <a id='divAdm' href='/administrador.php' class='item' visible='false'><i class='settings icon'></i>Configurações</a>
+        <a id='divAdm' href='/administrador/' class='item' visible='false'><i class='settings icon'></i>Configurações</a>
         <?php } ?>
     </div>
 

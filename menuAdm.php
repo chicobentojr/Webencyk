@@ -19,12 +19,14 @@ if (isset($_GET['logout'])){
         </div>
         <div class="right menu" style="height: 40px;">
             <a id="Mostrar" class="item"><i class="settings icon"></i>Configurações </a>
+            <?php if(isset($_SESSION['usr_id'])){ ?> 
             <a href="?logout=true" type="submit" name="logout" id="btnLogin" class="item"><i class='off icon'></i>Logout</a>
+            <?php }?> 
             <!--<input value="logout" type="submit" name="logout" id="btnLogin" class="ui teal button"><i class='off icon'></i>Logout</a>-->
         </div>
     </div>
     <div id="MenuOculto" class="ui small vertical right inverted labeled icon sidebar menu">
-        <a class="item" href="administrador.php">
+        <a class="item" href="/administrador.php">
             <i class="inverted circular teal settings icon"></i> <b>Configurações</b>
         </a>
         <div class="ui basic accordion">
@@ -60,7 +62,7 @@ if (isset($_GET['logout'])){
                     <a class="item" href="GerenciarAtividades.aspx">Atividades </a>
                     <a class="item" href="GerenciarQuestoes.aspx">Questões </a>
                     <a class="item" href="GerenciarUsuarios.aspx">Usuários </a>
-                    <a class="item" href="/gerenciar/mensagens.php">Mensagens </a>
+                    <a class="item" href="/administrador/gerenciar/mensagens.php">Mensagens </a>
                 </div>
             </div>
             <div class="title">

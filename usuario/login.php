@@ -1,7 +1,7 @@
 <?php
     session_start();
-    require_once 'config/crud.class.php';
-    require_once 'config/conexao.class.php';
+    require_once '../config/crud.class.php';
+    require_once '../config/conexao.class.php';
     
     $con = new conexao();
     $con->connect();
@@ -18,13 +18,18 @@
         else{
             while ($campo = mysql_fetch_array($consulta)) {
                 if ($campo['SENHA'] == $senha) {
-                    $_SESSION['usr_id'] = $campo['USUARIO_ID'];
-                    $_SESSION['usr_nome'] = $campo['NOME'];
-                    $_SESSION['usr_tipo'] = $campo['TIPO_ID'];
-                    if ($_SESSION['usr_tipo'] == 1) {
-                        header('Location:index.php');
+                    if ($campo['VERIFICADO'] == 1){
+                        $_SESSION['usr_id'] = $campo['USUARIO_ID'];
+                        $_SESSION['usr_nome'] = $campo['NOME'];
+                        $_SESSION['usr_tipo'] = $campo['TIPO_ID'];
+                        if ($_SESSION['usr_tipo'] == 1) {
+                            header('Location:/index.php');
+                        }
+                        else header('Location:/administrador/');
                     }
-                    else header('Location:administrador.php');
+                    else {
+                        $msgErr = "Não foi confirmado esse Email";
+                    }
                 }
                 else { $msgErr = "Senha Incorreta.";}
             }
@@ -35,12 +40,15 @@
 <html>
 <head>
     <?php
-        include('masterHead.php');
+        $caminhoCSS = "../css/";
+        $caminhoJS  = "../js/";
+        $caminhoIMG = "../imagens/";
+        include('../masterHead.php');
     ?>
 </head>
 <body>
     <form action="" method="post">
-        <?php include('menuSuperior.php'); ?>
+        <?php include('../menuSuperior.php'); ?>
 <section id="login">
     <div class="ui three column page grid ">
         <div class="column"> </div>
@@ -58,13 +66,8 @@
           <input ID="txtSenha" type="password" placeholder="Senha" name="senha"/>
         </div>
         <div class="ui divider"></div>
-        <center>     
-             <div class="ui buttons">
-                 <input  ID="btnCancelar" type="button" value="Voltar" class="ui button cancel" onclick="redirecionar('/')"/>
-                <div class="or" data-text="ou"></div>
-                <input ID="btnLogin" value="Entrar" name="entrar" type="submit"  class="ui teal button" />
-            </div>   
-        
+        <center>
+        <input ID="btnLogin" value="Entrar" name="entrar" type="submit"  class="ui teal button" />
         <?php if (isset($msgErr)) { ?>
         <div class="ui red message">
             <p><?= "<b>$msgErr</b>"; ?></p>

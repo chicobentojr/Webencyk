@@ -1,8 +1,8 @@
 <?php
     session_start();
     $usr_id = $_SESSION['usr_id'];
-    require_once 'config/crud.class.php';
-    require_once 'config/conexao.class.php';
+    require_once '../config/crud.class.php';
+    require_once '../config/conexao.class.php';
     
     $con = new conexao();
     $con->connect();
@@ -23,11 +23,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <?php include('masterHead.php'); ?>
+        <?php 
+        $caminhoCSS = "../css/";
+        $caminhoIMG = "../imagens/";
+        $caminhoJS = "../js/";
+        include('../masterHead.php');
+        ?>
     </head>
     <body>
         <form method="post">
-        <?php include('menuSuperior.php'); ?>
+        <?php include('../menuSuperior.php'); ?>
         <section id="login">
         <div class="ui three column page grid ">
             <div class="column"> </div>
@@ -47,12 +52,8 @@
                         </div>
                         
                         <div class="ui divider"></div>
-                        <center> 
-                         <div class="ui buttons">
-                            <input  ID="btnCancelar" type="button" value="Voltar" class="ui button cancel" onclick="redirecionar('/')"/>
-                            <div class="or" data-text="ou"></div>
+                        <center>
                             <input ID="btnLogin" value="Enviar" name="enviar" type="submit"  class="ui teal button" />
-                        </div>
                             <?php if (isset($msgErr)) { ?>
                             <div class="ui red message">
                                 <p><?= "<b>$msgErr</b>"; ?></p>
@@ -64,7 +65,7 @@
                             </div>
                             <?php } ?>
                         </center>
-     <div class="column"> </div>
+            <div class="column"> </div>
  </div>
 </section>
     </form>

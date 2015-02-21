@@ -1,6 +1,7 @@
 <?php
-    require_once '../config/conexao.class.php';
-    require_once '../config/crud.class.php';
+    session_start();
+    require_once '../../config/conexao.class.php';
+    require_once '../../config/crud.class.php';
     $con = new conexao(); // instancia classe de conxao
     $con->connect(); // abre conexao com o banco
 ?>
@@ -8,15 +9,15 @@
 <html>
 <head>
     <?php
-        $caminhoCSS = "../css/";
-        $caminhoJS = "../js/";
-        $caminhoIMG = "../imagens/";
-        include('../masterHead.php');
+        $caminhoCSS = "../../css/";
+        $caminhoJS = "../../js/";
+        $caminhoIMG = "../../imagens/";
+        include('../../masterHead.php');
     ?>
 </head>
 <body>
 <form method="post">
-    <?php include('../menuAdm.php'); ?>
+    <?php include('../../menuAdm.php'); ?>
         <div class="ui segment " style="background-color:transparent; box-shadow:none">
         <div class="ui one page column grid"> 
         <div class="column">

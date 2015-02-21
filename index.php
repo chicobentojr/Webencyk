@@ -20,7 +20,7 @@
 
     <section class='ui segment' style="background-color: transparent; box-shadow:none; margin-top:0; ">
         <div class="ui five column grid aligned center">
-            <div class="column" onclick="redirecionar('masterHome.php')">
+            <div class="column">
                 <div class="ui segment inverted teal">
                     <i class="ui icon code huge inverted circular"></i>
                     <h1 class="ui header">Aprenda!</h1>
