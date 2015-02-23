@@ -32,9 +32,15 @@ if (isset($_GET['logout'])){
     <div id='divMenuEsquerdo' class='ui small inverted vertical left labeled icon sidebar menu' >
         <div class='item'>
             <center>
-                <p class='ui label teal'><?php if (isset($_SESSION['usr_nome']) == false) echo "Usuário Não Logado"; else echo $_SESSION['usr_nome']; ?></p>
+                <p class='ui label teal'><?php if (!isset($_SESSION['usr_nome'])) echo "Usuário Não Logado"; else echo $_SESSION['usr_nome']; ?></p>
             <br />
-                <img src='<?= $caminhoIMG.'basic1-117_user_group_couple-512.png'?>' class='rounded ui medium image' width='250' align='middle'
+                <?php if(isset($_SESSION['usr_id'])){
+                    $linha = mysql_query("SELECT FOTO FROM USUARIO WHERE USUARIO_ID = $_SESSION['usr_id']");
+                    while($image = mysql_fetch_array($linha)){
+                    echo "<img class='rounded ui medium image' width='250' align='middle' src='data:image/jpeg;base64,'".base64_encode( $image['FOTO'] )."'/>";
+                    }
+                    else echo "<img src='<?= $caminhoIMG.'basic1-117_user_group_couple-512.png'?>' class='rounded ui medium image' width='250' align='middle'";
+                ?>
             </center>
         </div>
         <a href='PerfilProgresso.aspx' class='item'><i class='user icon'></i>Progresso</a>
