@@ -39,6 +39,7 @@ if (isset($_GET['logout'])){
                     while($image = mysql_fetch_array($linha)){
                     echo "<img class='rounded ui medium image' width='250' align='middle' src='data:image/jpeg;base64,'".base64_encode( $image['FOTO'] )."'/>";
                     }
+                }
                     else echo "<img src='<?= $caminhoIMG.'basic1-117_user_group_couple-512.png'?>' class='rounded ui medium image' width='250' align='middle'";
                 ?>
             </center>
