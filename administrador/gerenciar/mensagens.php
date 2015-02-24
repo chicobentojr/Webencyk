@@ -22,6 +22,12 @@
         <div class="ui one page column grid"> 
         <div class="column">
             <h3>Mensagens</h3>
+            <?php 
+                $linha = mysql_query("SELECT * FROM USUARIO");
+                while($image = mysql_fetch_array($linha)){
+                    echo '<img src="data:image/jpeg;base64,'.base64_encode( $image['FOTO'] ).'"/>';
+                }
+            ?>
             <div class="ui segment" style="overflow-x:auto; overflow-y:auto; background-color:transparent; box-shadow:none;">
             <?php 
                 $consulta = mysql_query("SELECT *,U.NOME FROM MENSAGEM M INNER JOIN USUARIO U ON U.USUARIO_ID = M.USUARIO_ID ORDER BY DATA_HORA DESC");
